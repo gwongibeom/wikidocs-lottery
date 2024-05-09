@@ -10,8 +10,8 @@ function App() {
       <Header />
       <div className='route_wrapper'>
         <Routes>
+          <Route path='/' element={<Lottery />} />
           <Route path='/about' element={<About />} />
-          <Route path='/lottery' element={<Lottery />} />
         </Routes>
       </div>
     </>
