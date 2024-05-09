@@ -1,8 +1,9 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import About from './pages/About'
-import Lottery from './pages/Lottery'
-import Header from './components/Header'
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+
+import Header from './components/Header';
+import About from './pages/About';
+import Lottery from './pages/Lottery';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
