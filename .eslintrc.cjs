@@ -1,18 +1,12 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  extends: ['@mvlchain/eslint-config'], // or @mvlchain/eslint-config/react
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
+    // rules에 다음과 같이 추가
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
     ],
   },
-}
+};
