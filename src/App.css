@@ -7,6 +7,5 @@
 
 .route_wrapper > div {
   width: 100%;
-  background-color: red;
   max-width: 800px;
 }
