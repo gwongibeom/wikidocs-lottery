@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  background-color: #ffffff;
+  height: 8vh;
+  align-items: center;
+  padding: 0px 3vw 0px 3vw;
+  gap: 3vw;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+header > nav > ul {
+  display: flex;
+  gap: 1vw;
+}
+
+.header_title {
+  color: #000;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header > nav > ul > li {
+  list-style-type: none;
+}
+
+header > nav > ul > li > * {
+  color: #000;
+  text-decoration: none;
+}
+
+.navLink_selected {
+  text-decoration: underline;
+  font-weight: 500;
+}
