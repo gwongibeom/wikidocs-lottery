@@ -11,11 +11,7 @@ const useCheckPageId = async (id: number | string): Promise<result> => {
   }
 
   try {
-    const response = await fetch(`https://proxy.cors.sh/${URL}/${id}`, {
-      headers: {
-        'x-cors-api-key': 'temp_1875e976e3284f84d6a2deaf253d3ba5',
-      },
-    });
+    const response = await fetch(`${URL}/${id}`);
 
     if (!response.ok) {
       return { title: '😭 페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };

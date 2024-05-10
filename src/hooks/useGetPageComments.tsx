@@ -20,11 +20,7 @@ interface IComment {
 
 const useGetPageComments = async (id: number | string): Promise<ICommentAPIResult> => {
   try {
-    const response = await fetch(`https://proxy.cors.sh/${URL}?page_no=${id}&page=1&size=9999`, {
-      headers: {
-        'x-cors-api-key': 'temp_1875e976e3284f84d6a2deaf253d3ba5',
-      },
-    });
+    const response = await fetch(`${URL}?page_no=${id}&page=1&size=9999`);
 
     if (!response.ok) {
       return { code: 'error' };
