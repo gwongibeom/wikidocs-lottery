@@ -6,6 +6,10 @@ interface result {
 }
 
 const useCheckPageId = async (id: number | string): Promise<result> => {
+  if (id === '') {
+    return { title: '😭 페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };
+  }
+
   try {
     const response = await fetch(`https://proxy.cors.sh/${URL}/${id}`, {
       headers: {
