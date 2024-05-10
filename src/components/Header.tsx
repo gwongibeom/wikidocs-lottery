@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import './Header.css'
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 
 const navItems = [
   {
@@ -10,7 +10,7 @@ const navItems = [
     name: '추첨',
     to: '/',
   },
-]
+];
 
 const Header = () => {
   return (
@@ -29,7 +29,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
