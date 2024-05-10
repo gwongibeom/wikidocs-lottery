@@ -1,0 +1,26 @@
+section {
+  margin-bottom: 16px;
+}
+.input_wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.input_wrapper > input {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.button_wrapper {
+  display: flex;
+  gap: 6px;
+}
+
+.button_wrapper > button {
+  flex: 1;
+}
