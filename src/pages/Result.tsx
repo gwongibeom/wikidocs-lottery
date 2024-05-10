@@ -2,8 +2,9 @@ import './Result.css';
 
 import { useEffect, useState } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
+import Button from '../components/Button';
 import LotteryPeopleList from '../components/LotteryPeopleList';
 
 interface IComment {
@@ -20,6 +21,7 @@ interface IResult {
 }
 
 const Result = () => {
+  const nav = useNavigate();
   const { paraResult } = useParams();
 
   const [decodedResult, setDecodedResult] = useState<IResult>();
@@ -28,8 +30,17 @@ const Result = () => {
     setDecodedResult(JSON.parse(decodeURIComponent(escape(window.atob(paraResult ?? '')))));
   }, []);
 
+  const onShare = () => {
+    navigator.clipboard.writeText(window.location.href);
+    alert('클립보드 복사 완료!');
+  };
+
+  const onGoAboutLottery = () => {
+    nav('/lottery');
+  };
+
   return (
-    <div>
+    <div className='result_wrapper'>
       <section className='congratulation_section'>
         <h1>👏</h1>
         <h2>
@@ -37,6 +48,10 @@ const Result = () => {
         </h2>
       </section>
       {decodedResult && <LotteryPeopleList comments={decodedResult.selectedComments} />}
+      <div className='buttons_wrapper'>
+        <Button title='다시 추첨하기' onClick={onGoAboutLottery} />
+        <Button title='공유하기' style='POSITIVE' onClick={onShare} />
+      </div>
     </div>
   );
 };
