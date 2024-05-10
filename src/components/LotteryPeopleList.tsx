@@ -12,11 +12,11 @@ interface IComment {
 
 const LotteryPeopleList = ({ comments }: { comments: IComment[] }) => {
   return (
-    <>
+    <div className='LotteryPeopleList'>
       {comments.map((item) => (
         <LotteryPeopleItem key={item.id} {...item} />
       ))}
-    </>
+    </div>
   );
 };
 
