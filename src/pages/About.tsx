@@ -1,7 +1,9 @@
 import Button from '../components/Button';
+import useSetTitle from '../hooks/useSetTitle';
 import './About.css';
 
 const About = () => {
+  useSetTitle('소개');
   const onMoveHref = (path: string) => {
     switch (path) {
       case 'github':

@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import Button from '../components/Button';
 import LotteryPeopleList from '../components/LotteryPeopleList';
+import useSetTitle from '../hooks/useSetTitle';
 
 interface IComment {
   content: string;
@@ -21,6 +22,7 @@ interface IResult {
 }
 
 const Result = () => {
+  useSetTitle('결과');
   const nav = useNavigate();
   const { paraResult } = useParams();
 
