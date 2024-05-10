@@ -31,10 +31,15 @@ const LotteryForm = () => {
     }
   };
 
+  const onSubmit = () => {
+    console.log(lotteryForm);
+  };
+
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const name: string = e.target.name;
     const value: string = e.target.value;
-    setLotteryForm({ ...lotteryForm, [name]: parseInt(value) });
+
+    setLotteryForm({ ...lotteryForm, [name]: value === '' ? '' : parseInt(value) });
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -76,7 +81,7 @@ const LotteryForm = () => {
       <section className='button_wrapper'>
         <Button title={'소개로 '} style='NEGATIVE' onClick={onGoAboutClick} />
         <Button title={'초기화'} onClick={onInputReset} />
-        <Button title={'추첨'} style='POSITIVE' />
+        <Button title={'추첨'} style='POSITIVE' onClick={onSubmit} />
       </section>
     </div>
   );
