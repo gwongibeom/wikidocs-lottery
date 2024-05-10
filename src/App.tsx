@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import About from './pages/About';
 import Lottery from './pages/Lottery';
+import Result from './pages/Result';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Lottery />} />
           <Route path='/about' element={<About />} />
+          <Route path='/result/:paraResult' element={<Result />} />
         </Routes>
       </div>
     </>

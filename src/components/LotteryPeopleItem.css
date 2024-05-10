@@ -1,0 +1,19 @@
+.LotteryPeopleItem {
+  background-color: rgba(149, 200, 255, 0.2);
+  margin: 0px 0px 10px 0px;
+  padding: 10px 20px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.LotteryPeopleItem > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.LotteryPeopleItem > .info_section {
+  justify-content: end;
+}
