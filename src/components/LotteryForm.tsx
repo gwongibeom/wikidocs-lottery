@@ -30,6 +30,11 @@ interface ICommentAPIResult {
   data?: IData;
 }
 
+interface IResult {
+  selectedComments: IComment[];
+  total_count: number;
+}
+
 const LotteryForm = () => {
   const pageNameParagraphRef = useRef<HTMLParagraphElement>(null);
   const pageNumberInput = useRef<HTMLInputElement>(null);
@@ -70,6 +75,7 @@ const LotteryForm = () => {
     }
 
     const comment_list: IComment[] = response.data.comment_list;
+    const total_count: number = response.data.total;
     if (!comment_list || comment_list.length === 0 || Number(comment_list.length) < Number(drawNumber)) {
       alert('댓글이 없거나 부족해요!');
       return;
@@ -77,15 +83,21 @@ const LotteryForm = () => {
 
     const shuffledComments = comment_list.sort(() => Math.random() - 0.5);
     const selectedComments = shuffledComments.slice(0, Number(drawNumber));
+    const result: IResult = {
+      selectedComments,
+      total_count,
+    };
+    const base64EncodeJsonString = btoa(unescape(encodeURIComponent(JSON.stringify(result))));
+    console.log(base64EncodeJsonString);
 
-    console.log(selectedComments);
+    nav(`/result/${base64EncodeJsonString}`);
   };
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const name: string = e.target.name;
     const value: string = e.target.value;
 
-    setLotteryForm({ ...lotteryForm, [name]: value === '' ? '' : parseInt(value) });
+    setLotteryForm({ ...lotteryForm, [name]: value === '' ? '' : parseInt(value, 10) });
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
