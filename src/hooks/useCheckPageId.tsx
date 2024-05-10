@@ -14,13 +14,13 @@ const useCheckPageId = async (id: number | string): Promise<result> => {
     });
 
     if (!response.ok) {
-      return { title: '페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };
+      return { title: '😭 페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };
     }
 
     const json = await response.json();
-    return { title: `조회성공! ${json.subject}`, code: 'success' };
+    return { title: `👍 조회성공! ${json.subject}`, code: 'success' };
   } catch (error) {
-    return { title: '페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };
+    return { title: '😭 페이지 번호가 맞는지 다시 확인해주세요!', code: 'error' };
   }
 };
 
