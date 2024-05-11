@@ -7,6 +7,7 @@ export const conteffi = new JSConfetti();
 import Header from './components/Header';
 import About from './pages/About';
 import Lottery from './pages/Lottery';
+import NotFound from './pages/NotFound';
 import Result from './pages/Result';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Lottery />} />
           <Route path='/about' element={<About />} />
           <Route path='/result/:paraResult' element={<Result />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
     </>
