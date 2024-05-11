@@ -34,9 +34,9 @@ const Result = () => {
     setDecodedResult(JSON.parse(decodeURIComponent(escape(window.atob(paraResult ?? '')))));
 
     conteffi.addConfetti({
-      emojis: ['🎉', '🥳', '🎊', '👏'],
+      confettiColors: ['#FF0000', '#FFA500', '#FFFF00', '#008000', '#0000FF', '#800080', '#FFFFFF'],
       confettiRadius: 6,
-      confettiNumber: 50,
+      confettiNumber: 500,
     });
   }, []);
 
