@@ -19,6 +19,7 @@ const About = () => {
   };
   return (
     <div>
+      <img src='/ms-icon-150x150.png' />
       <h1>위키독스 댓글 추첨기</h1>
       <p>위키독스 책의 댓글들을 랜덤으로 추첨 하는 추첨기입니다.</p>
       <br />
