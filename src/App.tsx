@@ -1,5 +1,8 @@
 import './App.css';
+import JSConfetti from 'js-confetti';
 import { Route, Routes } from 'react-router-dom';
+
+export const conteffi = new JSConfetti();
 
 import Header from './components/Header';
 import About from './pages/About';

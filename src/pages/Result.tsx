@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { useNavigate, useParams } from 'react-router-dom';
 
+import { conteffi } from '../App';
 import Button from '../components/Button';
 import LotteryPeopleList from '../components/LotteryPeopleList';
 import useSetTitle from '../hooks/useSetTitle';
@@ -30,6 +31,12 @@ const Result = () => {
 
   useEffect(() => {
     setDecodedResult(JSON.parse(decodeURIComponent(escape(window.atob(paraResult ?? '')))));
+
+    conteffi.addConfetti({
+      emojis: ['🎉', '🥳', '🎊', '👏'],
+      confettiRadius: 6,
+      confettiNumber: 50,
+    });
   }, []);
 
   const onShare = () => {
