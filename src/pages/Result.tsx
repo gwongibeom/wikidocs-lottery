@@ -38,7 +38,7 @@ const Result = () => {
   };
 
   const onGoAboutLottery = () => {
-    nav('/lottery');
+    nav('/');
   };
 
   return (
