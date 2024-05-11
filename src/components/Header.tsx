@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header>
       <NavLink to={'/'} className='header_title'>
-        위키독스 댓글 추첨기
+        <img src='/favicon-32x32.png'></img>위키독스 댓글 추첨기
       </NavLink>
 
       <nav>
