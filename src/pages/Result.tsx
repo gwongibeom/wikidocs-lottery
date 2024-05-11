@@ -59,7 +59,7 @@ const Result = () => {
       </section>
       {decodedResult && <LotteryPeopleList comments={decodedResult.selectedComments} />}
       <div className='buttons_wrapper'>
-        <Button title='다시 추첨하기' onClick={onGoAboutLottery} />
+        <Button title='다른 페이지 추첨하기' onClick={onGoAboutLottery} />
         <Button title='공유하기' style='POSITIVE' onClick={onShare} />
       </div>
       <AdOne />
