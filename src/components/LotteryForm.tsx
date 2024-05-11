@@ -88,7 +88,6 @@ const LotteryForm = () => {
       total_count,
     };
     const base64EncodeJsonString = btoa(unescape(encodeURIComponent(JSON.stringify(result))));
-    console.log(base64EncodeJsonString);
 
     nav(`/result/${base64EncodeJsonString}`);
   };
