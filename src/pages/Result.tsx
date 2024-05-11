@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { conteffi } from '../App';
+import AdOne from '../components/AdOne';
 import Button from '../components/Button';
 import LotteryPeopleList from '../components/LotteryPeopleList';
 import useSetTitle from '../hooks/useSetTitle';
@@ -61,6 +62,7 @@ const Result = () => {
         <Button title='다시 추첨하기' onClick={onGoAboutLottery} />
         <Button title='공유하기' style='POSITIVE' onClick={onShare} />
       </div>
+      <AdOne />
     </div>
   );
 };

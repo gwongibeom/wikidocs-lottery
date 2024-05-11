@@ -20,6 +20,7 @@
   display: flex;
   gap: 6px;
   justify-content: center;
+  margin-bottom: 16px;
 }
 
 .buttons_wrapper > button {
